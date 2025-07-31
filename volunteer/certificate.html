@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Certificate</title>
+  <link rel="stylesheet" href="../css/certificate.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <h2>Volunteer Panel 🙋‍♀️</h2>
+      </div>
+      <ul>
+        <li><img src="https://img.icons8.com/fluency/48/task.png"/><a href="volunteer_dashboard.html">Browse Causes</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/checked-checkbox.png"/><a href="apply_event.html">Apply</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/appointment-reminders.png"/><a href="status.html">Participation Status</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/certificate.png"/><a href="certificate.html" class="active">Certificate</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/user-male-circle.png"/><a href="volunteerprofile.html" class="active">Profile</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/logout-rounded-up.png" alt="Logout" /><a href="Logout.html">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <h1>Your Volunteering Certificate 🏅</h1>
+      <div class="certificate-box" id="certificate-content">
+        <h2>Certificate of Appreciation</h2>
+        <p>This certificate is proudly presented to</p>
+        <h3>RIYA</h3>
+        <p>for active participation and valuable contribution as a volunteer<br>in community upliftment programs organized by our NGO.</p>
+        <p>Date: July 30, 2025</p>
+      </div>
+      <button class="download-btn" onclick="downloadPDF()">Download as PDF</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    async function downloadPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      const content = document.getElementById("certificate-content").innerText;
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(18);
+      doc.text("Certificate of Appreciation", 20, 30);
+      doc.setFontSize(12);
+      doc.setFont("helvetica", "normal");
+      doc.text(content.replace("Certificate of Appreciation", ""), 20, 50);
+      doc.save("volunteer_certificate.pdf");
+    }
+  </script>
+</body>
+</html>

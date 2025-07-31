@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #00796b, #004d40);
+  padding: 30px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 29px;
+  margin-bottom: 50px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.sidebar ul li img {
+  width: 24px;
+  margin-right: 12px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  color: #ffeb3b;
+}
+
+.main {
+  flex: 1;
+  padding: 40px;
+}
+
+.main h1 {
+  color: #004d40;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.report-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.report-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 260px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.report-card:hover {
+  transform: translateY(-6px);
+}
+
+.icon-box {
+  background-color: #00796b;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box img {
+  width: 28px;
+  height: 28px;
+}
+
+.text h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.text .big {
+  font-size: 18px;
+  color: #00796b;
+  font-weight: bold;
+}
+
+.text .change {
+  font-size: 13px;
+  color: #888;
+}

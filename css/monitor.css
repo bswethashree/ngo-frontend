@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdf6ff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(135deg, #a445b2, #d41872);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(164, 69, 178, 0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.logo h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #fdf6ff;
+}
+
+h1 {
+  color: #a445b2;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: linear-gradient(135deg, #ffe3f3, #f5d1fc);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(164, 69, 178, 0.2);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(212, 24, 114, 0.1);
+  top: -20px;
+  right: -20px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(212, 24, 114, 0.25);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #a445b2;
+  z-index: 1;
+  position: relative;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #3d1d4f;
+  margin-top: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.table-section h2 {
+  color: #a445b2;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(164, 69, 178, 0.1);
+}
+
+th, td {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 15px;
+}
+
+thead {
+  background-color: #f1c7ec;
+  color: #3d1d4f;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fdf0fa;
+}
+
+.approved {
+  color: green;
+  font-weight: bold;
+}
+
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.flagged {
+  color: red;
+  font-weight: bold;
+}

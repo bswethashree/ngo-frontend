@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monitor Activities</title>
+  <link rel="stylesheet" href="../css/monitor.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="https://img.icons8.com/fluency/48/admin-settings-male.png" />
+        <h2>Admin Panel 🛡️</h2>
+      </div>
+      <ul>
+        <li><img src="https://img.icons8.com/fluency/48/combo-chart.png"/><a href="admindashboard.html">Dashboard</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/ok.png"/><a href="approvals.html">NGO Approvals</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/combo-chart--v1.png"/><a href="monitor.html">Monitor Activities</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/error.png"/><a href="suspend.html">Flag/Suspend</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/privacy-policy.png"/><a href="transparency.html">Transparency</a></li>
+        <li><img src="https://img.icons8.com/fluency/48/logout-rounded-up.png" alt="Logout" /><a href="logout.html">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <h1>🔍 NGO Activity Monitor</h1>
+
+      <div class="cards">
+        <div class="card">
+          <h2>🗓️ Today’s Submissions</h2>
+          <p>42 Reports</p>
+        </div>
+        <div class="card">
+          <h2>📸 Images Verified</h2>
+          <p>312 Uploads</p>
+        </div>
+        <div class="card">
+          <h2>🧾 Reports Flagged</h2>
+          <p>5 Issues</p>
+        </div>
+        <div class="card">
+          <h2>⏱ Avg. Verification Time</h2>
+          <p>2.4 mins</p>
+        </div>
+      </div>
+
+      <div class="table-section">
+        <h2>📋 Recent Activity Logs</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NGO Name</th>
+              <th>Activity</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>EcoCare Trust</td>
+              <td>Planted 50 saplings</td>
+              <td>30 Jul 2025</td>
+              <td class="approved">Approved</td>
+            </tr>
+            <tr>
+              <td>CleanEarth Org</td>
+              <td>Beach Cleanup</td>
+              <td>30 Jul 2025</td>
+              <td class="pending">Pending</td>
+            </tr>
+            <tr>
+              <td>Hope Foundation</td>
+              <td>Food Donation Drive</td>
+              <td>29 Jul 2025</td>
+              <td class="flagged">Flagged</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

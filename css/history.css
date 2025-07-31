@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f9ff;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #1565c0, #0d47a1);
+  padding: 30px 20px;
+  color: white;
+  height: 100vh;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.sidebar .logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.sidebar .logo h2 {
+  font-size: 22px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  color: #ffe082;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 50px;
+  background-color: #f4f9ff;
+  overflow-x: auto;
+}
+
+.main-content h1 {
+  font-size: 32px;
+  color: #0d47a1;
+  margin-bottom: 40px;
+}
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.history-table thead {
+  background-color: #1565c0;
+  color: #fff;
+}
+
+.history-table th, 
+.history-table td {
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.history-table th {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-bottom: 2px solid #0d47a1;
+}
+
+.history-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.2s ease;
+}
+
+.history-table tbody tr:nth-child(even) {
+  background-color: #f5faff;
+}
+
+.history-table tbody tr:hover {
+  background-color: #e3f2fd;
+  cursor: pointer;
+}
+
+.history-table td {
+  color: #0d47a1;
+  font-weight: 500;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.history-table td:not(:last-child) {
+  padding-right: 30px;
+}
